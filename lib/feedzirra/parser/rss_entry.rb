@@ -35,8 +35,18 @@ module Feedzirra
       elements :category, :as => :categories
 
       element :guid, :as => :entry_id
+      
+      
+      elements :"media:content", :as => :medias, :class =>  RSSMedia
+      
     end
 
+  end
+  
+  
+  class RSSMedia
+    include SAXMachine
+    include FeedEntryUtilities
   end
   
 end
