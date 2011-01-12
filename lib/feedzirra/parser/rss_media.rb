@@ -19,6 +19,10 @@ module Feedzirra
       element :"media:title", :as => :title
       element :"media:description", :as => :description, :with => {:type => "html"}
       element :"media:thumbnail", :as => :thumbnail, :value => :url
+      
+      def test
+        puts "in test.................."
+      end
     end
 
   end
